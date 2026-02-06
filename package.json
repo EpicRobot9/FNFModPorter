@@ -1,0 +1,20 @@
+{
+  "name": "fnf-porter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FNF HTML5 Auto-Porter monorepo",
+  "workspaces": [
+    "packages/*",
+    "packages/publishers/*"
+  ],
+  "scripts": {
+    "build": "npm run --workspace @fnf-porter/core build && npm run --workspace @fnf-porter/publisher-epicrobo build && npm run --workspace @fnf-porter/cli build && npm run --workspace fnf-porter-ui build",
+    "dev": "npm run --workspace @fnf-porter/ui dev",
+    "test": "npm run --workspace @fnf-porter/core test",
+    "setup": "npm install",
+    "ci:artifacts": "node packages/cli/dist/index.js port packages/core/tests/fixtures/psych --dry-run --publish --target local --dest ./ci-artifacts"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
