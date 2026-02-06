@@ -1,0 +1,15 @@
+:root { color-scheme: dark; font-family: Inter, sans-serif; }
+body { margin: 0; background: #12141b; color: #d8deef; }
+.app { display: grid; grid-template-columns: 220px 1fr; height: 100vh; }
+aside { background: #171b26; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+aside button { background: #202638; border: 0; color: #cdd5eb; padding: 10px; border-radius: 8px; text-align:left; }
+aside button.on { background:#2d3550; }
+main { display: grid; grid-template-rows: 110px 1fr 220px; }
+header { border-bottom: 1px solid #2f3547; padding: 16px; display:flex; align-items:center; justify-content:space-between; }
+section { overflow:auto; padding: 12px; }
+table { width:100%; border-collapse: collapse; }
+th, td { border-bottom:1px solid #2f3547; padding:8px; text-align:left; }
+footer { border-top:1px solid #2f3547; padding:8px; display:flex; flex-direction:column; }
+.logs { background:#090b10; border-radius:8px; padding:8px; overflow:auto; height:170px; font-family: monospace; }
+.warn { color:#ffcb6b; }
+.error { color:#ff6b6b; }
